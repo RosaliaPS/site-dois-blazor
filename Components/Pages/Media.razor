@@ -1,0 +1,21 @@
+@page  "/media"
+@rendermode InteractiveServer
+
+<h1>Media</h1>
+<input type="number" @bind="nota1"/>
+<input type="number" @bind="nota2" />
+<button @onclick="Conversors">Converter</button>
+<p>Valor medio: @media</p>
+
+@code{
+    double nota1;
+
+    double nota2;
+
+    double media;
+
+    void Conversors()
+    {
+        media = (nota1 + nota2)/2;
+    }
+}

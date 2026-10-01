@@ -1,0 +1,17 @@
+@page "/sorteio"
+@rendermode InteractiveServer
+
+<h3>Sorteio de numeros<h3>
+<button @onclick="Sorteia">Gerar Número Aleatório</button>
+<h2>@numeroSorteado</h2>
+
+@code
+{
+    int? numeroSorteado;
+    void Sorteia()
+    {
+        Random random = new Random();
+        numeroSorteado = random.Next(1, 101);
+        
+    }
+}

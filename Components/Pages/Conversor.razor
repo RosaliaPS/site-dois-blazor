@@ -1,0 +1,18 @@
+@page  "/conversor"
+@rendermode InteractiveServer
+
+<h1>Conversor</h1>
+<input type="number" @bind="celsius" placeholder="Celcius" />
+<button @onclick="Conversors">Converter</button>
+<p>Temperatura em Fahrenheit: @fahrenheit °F.</p>
+
+@code{
+    double celsius;
+
+    double fahrenheit;
+
+    void Conversors()
+    {
+        fahrenheit = (celsius * 9 / 5) + 32;
+    }
+}
